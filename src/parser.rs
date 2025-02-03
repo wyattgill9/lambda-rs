@@ -74,7 +74,7 @@ impl Parser {
             .ok_or_else(|| ParseError::UnboundVariable(name))
     }
 
-    // Helper methods for parsing identifiers and characters
+    // helper methods for parsing
     fn consume(&mut self, expected: char) -> bool {
         self.skip_whitespace();
         if self.pos < self.input.len() && self.input[self.pos] == expected {
